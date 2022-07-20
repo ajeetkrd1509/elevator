@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>com.hcl</groupId>
 	<artifactId>elevator</artifactId>
-	<version>v3</version>
+	<version>v1</version>
 	<name>Elevator Management</name>
 	<description>Elevator Management Project</description>
 	<properties>
@@ -85,7 +85,7 @@
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-jar-plugin</artifactId>
               <configuration>
-                  <finalName>${project.name}-${current.time}</finalName>
+                  <finalName>${project.artifactId}-${project.version}</finalName>
               </configuration>
           </plugin>
 		</plugins>
@@ -95,10 +95,6 @@
 				<filtering>true</filtering>
 			</resource>
 		</resources>
-		<finalName>${project.artifactId}-${project.version}</finalName>
-	
-	
-	
 	</build>
 	<profiles>
 		<profile>
@@ -123,17 +119,4 @@
 			</properties>
 		</profile>
 	</profiles>
-	
-	 <distributionManagement>
-         <repository>
-            <id>dev</id>
-            <name>dev</name>
-            <url>https://maven.pkg.github.com/ajeetkrd/elevator</url>
-        </repository>
-	<snapshotRepository>
-            <id>elevator-snapshot</id>
-            <name>elevator-snapshot</name>
-            <url>https://github.com/ajeetkrd/mavenRepo</url>
-        </snapshotRepository>
-    </distributionManagement>
 </project>

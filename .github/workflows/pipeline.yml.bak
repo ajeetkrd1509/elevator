@@ -29,6 +29,8 @@ jobs:
       with:
         java-version: 11
         distribution: 'temurin'
+        server-id: dev # Value of the distributionManagement/repository/id field of the pom.xml
+        settings-path: ${{ github.workspace }} # location for the settings.xml file
 
     - name: Cache the Maven packages to speed up build
       uses: actions/cache@v1
